@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileHandlingActivity {
@@ -35,5 +36,14 @@ public class FileHandlingActivity {
         Files.write(Paths.get("data.txt"), dataTwo.getBytes(StandardCharsets.UTF_8));
         String dataThree = "Hello, World!";
         Files.write(Paths.get("log.txt"), dataThree.getBytes(StandardCharsets.UTF_8));
+
+
+        Path file1 = Paths.get("notes.txt");
+        System.out.println(Files.readString(file1));
+        Path file2 = Paths.get("data.txt");
+        System.out.println(Files.readString(file2));
+        Path file3 = Paths.get("log.txt");
+        System.out.println(Files.readString(file3));
+        
     }
 }
