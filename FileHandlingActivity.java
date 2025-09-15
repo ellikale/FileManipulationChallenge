@@ -20,20 +20,20 @@ public class FileHandlingActivity {
         // f. Copy contents to backup file
         
         // g. List all files in both directories
-        File dir = new File("mysuperawesomedirectory");
+        File dir = new File("JavaFileSystem");
         dir.mkdir();
         
-        File fileOne = new File("myPerfectFile.txt");
+        File fileOne = new File("notes.txt");
         fileOne.createNewFile();
-        File fileTwo = new File("myPerfectedFile.txt");
+        File fileTwo = new File("data.txt");
         fileTwo.createNewFile();
-        File fileThree = new File("myPerfectestFile.txt");
+        File fileThree = new File("log.txt");
         fileThree.createNewFile();
         String dataOne = "Hello, World!";
-        Files.write(Paths.get("myPerfectFile.txt"), dataOne.getBytes(StandardCharsets.UTF_8));
+        Files.write(Paths.get("notes.txt"), dataOne.getBytes(StandardCharsets.UTF_8));
         String dataTwo = "Hello, Gorld!";
-        Files.write(Paths.get("myPerfectFile.txt"), dataTwo.getBytes(StandardCharsets.UTF_8));
+        Files.write(Paths.get("data.txt"), dataTwo.getBytes(StandardCharsets.UTF_8));
         String dataThree = "Hello, World!";
-        Files.write(Paths.get("myPerfectFile.txt"), dataThree.getBytes(StandardCharsets.UTF_8));
+        Files.write(Paths.get("log.txt"), dataThree.getBytes(StandardCharsets.UTF_8));
     }
 }
