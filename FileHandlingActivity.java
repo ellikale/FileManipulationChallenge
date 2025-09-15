@@ -23,5 +23,17 @@ public class FileHandlingActivity {
         File dir = new File("mysuperawesomedirectory");
         dir.mkdir();
         
+        File fileOne = new File("myPerfectFile.txt");
+        fileOne.createNewFile();
+        File fileTwo = new File("myPerfectedFile.txt");
+        fileTwo.createNewFile();
+        File fileThree = new File("myPerfectestFile.txt");
+        fileThree.createNewFile();
+        String dataOne = "Hello, World!";
+        Files.write(Paths.get("myPerfectFile.txt"), dataOne.getBytes(StandardCharsets.UTF_8));
+        String dataTwo = "Hello, Gorld!";
+        Files.write(Paths.get("myPerfectFile.txt"), dataTwo.getBytes(StandardCharsets.UTF_8));
+        String dataThree = "Hello, World!";
+        Files.write(Paths.get("myPerfectFile.txt"), dataThree.getBytes(StandardCharsets.UTF_8));
     }
 }
