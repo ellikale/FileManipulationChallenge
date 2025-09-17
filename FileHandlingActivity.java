@@ -24,6 +24,13 @@ public class FileHandlingActivity {
         // f. Copy contents to backup file
         
         // g. List all files in both directories
+        
+        activityTwo();
+
+        debugFileOperation();
+    }
+
+    public static void activityTwo() throws IOException{
         File dir = new File("JavaFileSystem");
         dir.mkdir();
         
@@ -63,6 +70,21 @@ public class FileHandlingActivity {
         System.out.println("Files in Backup...");
         for (File f2 : dirt.listFiles()) {
             System.out.println("..." + f2);
+        }
+    }
+
+    public static void debugFileOperation(){
+            try {
+        // Creating a file with an invalid name (forward slash is invalid for file names on many OS)
+        File file = new File("JavaFileSystem","fileName.txt");
+        
+        // Attempting to write to the invalid file
+        FileWriter writer = new FileWriter(file);
+        writer.write("Will this fail?");
+        writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace(); 
         }
     }
 }
